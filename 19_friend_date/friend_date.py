@@ -23,7 +23,5 @@ def friend_date(a, b):
             else:
                 continue
     return False
-                # for hobbies in subject[b.index('list-of-hobbies')]:
-                #     return True if hobbies == hobbies else return False
         
                 
