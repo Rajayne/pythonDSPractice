@@ -1,3 +1,9 @@
+def is_even(num):
+    return num % 2 == 0
+
+def is_string(el):
+    return isinstance(el, str)
+
 def partition(lst, fn):
     """Partition lst by predicate.
      
@@ -19,3 +25,17 @@ def partition(lst, fn):
         >>> partition(["hi", None, 6, "bye"], is_string)
         [['hi', 'bye'], [None, 6]]
     """
+    a = []
+    b = []
+    
+    # for el in lst:
+    #     if fn == is_even:
+    #         a.append(el) if is_even(el) == True else b.append(el)
+    #     if fn == is_string:
+    #         a.append(el) if isinstance(el, str) == True else b.append(el)
+
+    for el in lst:
+        a.append(el) if fn(el) == True else b.append(el)
+    return [a, b]
+
+partition([1, 2, 3, 4], is_even)
