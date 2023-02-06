@@ -13,7 +13,7 @@ def sum_floats(nums):
     # if something is a float!
     sum = 0
     for num in nums:
-        if isinstance(num, float):
+        if isinstance(num, float) == True:
             sum += num
         else:
             continue

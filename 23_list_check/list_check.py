@@ -7,3 +7,9 @@ def list_check(lst):
         >>> list_check([[1], "nope"])
         False
     """
+    for element in lst:
+        if isinstance(element, list) == False:
+            return False
+        else:
+            continue
+    return True
