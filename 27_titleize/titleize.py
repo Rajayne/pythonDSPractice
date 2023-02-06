@@ -7,6 +7,12 @@ def titleize(phrase):
         >>> titleize('oNLy cAPITALIZe fIRSt')
         'Only Capitalize First'
     """
-    return ' '.join(word.capitalize() for word in phrase.lower().split(' '))
+    new_phrase = phrase.lower().split()
+    result = ''
+    for word in new_phrase:
+        result += ''.join(word.capitalize()) + ' '
+    return result.strip()
+
+    # return ' '.join(word.capitalize() for word in phrase.lower().split(' '))
 
 titleize('oNLy cAPITALIZe fIRSt')
