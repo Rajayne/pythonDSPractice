@@ -18,5 +18,3 @@ def vowel_count(phrase):
             else:
                 count.update({letter: 1})
     return count
-
-    
