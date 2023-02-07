@@ -15,3 +15,14 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+    # dic = dict(zip(keys, values))
+
+    dic = dict.fromkeys(keys, None)
+    for i in range(0, len(keys)):
+        if len(values) <= len(keys):
+            for i in range(0, len(values)):
+                dic.update({keys[i]: values[i]})
+        else:
+            for i in range(0, len(keys)):
+                dic.update({keys[i]: values[i]})
+    print(dic)
