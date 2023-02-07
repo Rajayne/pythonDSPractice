@@ -17,7 +17,7 @@ def read_file_list(filename):
     """
     f = open(filename, "r")
     for x in f:
-        print(f"- {x}")
+        print(f"- {x}".strip())
     f.close()
 
     # hint: when you read lines of files, there will be a "newline"
