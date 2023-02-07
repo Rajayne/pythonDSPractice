@@ -18,3 +18,16 @@ def sum_up_diagonals(matrix):
         >>> sum_up_diagonals(m2)
         30
     """
+    sum = 0
+
+    index = 0
+    for rows in matrix:
+        sum += rows[index]
+        index += 1
+
+    rev_index = len(matrix) - 1
+    for revrow in matrix:
+        sum += revrow[rev_index]
+        rev_index -= 1
+    
+    print(sum)

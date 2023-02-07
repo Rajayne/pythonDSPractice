@@ -27,5 +27,20 @@ def is_odd_string(word):
         >>> is_odd_string('amazing')
         True
     """
-
     # Hint: you may find the ord() function useful here
+    # Created dictionary of alphabet values to reference
+    dic = dict.fromkeys('abcdefghijklmnopqrstuvwxyz')
+    value = 1
+    for letter in dic:
+        dic[letter] = value
+        value += 1
+
+    sum = 0
+    for char in word:
+        sum += dic[char.lower()]
+
+    if sum % 2 == 0:
+        return False
+    return True
+
+is_odd_string('amazing')
